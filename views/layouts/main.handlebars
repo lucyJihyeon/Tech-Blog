@@ -17,9 +17,18 @@
             <a href="/login">LogIn</a>
             {{/if}}
         </nav>
+        <!--dynamically generating a page title-->
+        <div class="title">
+            {{ pageTitle }}
+        </div>
     </header>
     <main>
+        <!-- render the sub layout-->
         {{{ body }}}
     </main>
+    <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
