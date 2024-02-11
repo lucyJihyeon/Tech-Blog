@@ -2,7 +2,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-//when an user sends a post request to the ending '/users'
+//when an user sends a post request to the ending 'api/users'
 router.post("/", async (req, res) => {
   try {
     //create a userData
@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//when a user sends a post request to the ending '/users/login'
+//when a user sends a post request to the ending 'api/users/login'
 router.post("/login", async (req, res) => {
   try {
     //check the user data that matches the user email
@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-//when a user sends a post request to the ending 'users/logout'
+//when a user sends a post request to the ending 'api/users/logout'
 router.post("/logout", (req, res) => {
   //check if the user's log in status is true or false
   if (req.session.logged_in) {

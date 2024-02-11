@@ -1,6 +1,7 @@
 //import user and blog models
 const User = require('./User');
 const Blog = require('./Blog');
+const Comment = require('./Comment');
 
 //indicates that an user can have many blog posts
 User.hasMany(Blog, {
@@ -9,9 +10,25 @@ User.hasMany(Blog, {
     onDelete: 'CASCADE'
 });
 
+//blog can have many comments
+Blog.hasMany(Comment, {
+    foreignKey: 'blog_id',
+    onDelete: 'CASCADE'
+});
+
 //Blog belongs to an individual user
 Blog.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Blog };
+//comment belongs to an individual blog
+Comment.belongsTo(Blog, {
+    foreignKey: 'blog_id'
+});
+
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
+
+module.exports = { User, Blog, Comment };
