@@ -10,12 +10,6 @@ User.hasMany(Blog, {
     onDelete: 'CASCADE'
 });
 
-//indicates that a user can have many comments 
-User.hasMany(Comment, {
-   through: {
-    model: Blog
-   }
-});
 //blog can have many comments
 Blog.hasMany(Comment, {
     foreignKey: 'blog_id',
@@ -27,15 +21,14 @@ Blog.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-//comment belongs to an individual user
-Comment.belongsTo(User, {
-    through: {
-        model: Blog
-    }
-});
 //comment belongs to an individual blog
 Comment.belongsTo(Blog, {
     foreignKey: 'blog_id'
 });
 
-module.exports = { User, Blog };
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
+
+module.exports = { User, Blog, Comment };
