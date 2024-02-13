@@ -2,6 +2,13 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+//when an user sends a get request to the ending 'api/users', render login handlebars
+router.get("/",(req, res)=> {
+  res.render("login");
+});
+
+
+
 //when an user sends a post request to the ending 'api/users'
 router.post("/", async (req, res) => {
   try {
@@ -23,7 +30,7 @@ router.post("/", async (req, res) => {
 //when a user sends a post request to the ending 'api/users/login'
 router.post("/login", async (req, res) => {
   try {
-    //check the user data that matches the user email
+    //check the user data that matches the user name
     const userData = await User.findOne({ where: { name: req.body.name } });
 
     //if the user name is not found in the data, send a response with a 400 status 
