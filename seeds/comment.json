@@ -1,0 +1,14 @@
+[
+    {
+        "description": "I like the fact that it provides a layer of abstraction over database! we don't have to rewite large portions of hardcoding.",
+        "blog_id": "1"
+    }, 
+    {
+        "description": "I prefer SDK because it provides a lit of development tools, such as debuggers, emulators, and testing frameworks",
+        "blog_id": "2"
+    },
+    {
+        "description": "In Python, exec() is somewhat similar to eval() in JavaScript in that both functions can execute code represented as a string.",
+        "blog_id": "3"
+    }
+]
