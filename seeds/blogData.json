@@ -1,23 +1,14 @@
 [
     {
-        "name": "Sal",
-        "email": "sal@hotmail.com",
-        "password": "password12345"
+        "title":"Object-Relational Mapping(ORM)",
+        "description":"ORM is a programming technique that maps objects from the OOP model to the relational database model and vice versa"
     },
     {
-        "name": "Lernantino",
-        "email": "lernantino@gmail.com",
-        "password": "password12345"
+        "title":"Difference between API and SDK",
+        "description":"SDKs bring third-party tools and resources to your environment. In contrast, an application programming interface (API) is a mechanism that enables two software components to communicate with each other using predetermined protocols."
     },
     {
-        "name": "Amiko",
-        "email": "amiko2k20@aol.com",
-        "password": "password12345"
-    },
-    {
-        "name": "Lucy",
-        "email": "LucyK2000@gmail.com",
-        "password": "password12345"
+        "title":"exec() Method",
+        "description":"The `exec()` method is a regular expression method that searches a specified string for a match and returns an array containing information about the match or `null` if no match is found. It returns an array where the first element is the matched substring, and subsequent elements provide additional information such as captured groups, index, and input string."
     }
-
 ]
