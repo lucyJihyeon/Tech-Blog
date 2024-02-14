@@ -1,23 +1,24 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
+    const statusText = document.getElementById("status");
+    statusText.textContent = "";
   
     // Collect values from the login form
     const name = document.querySelector('#name-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    if (userName && password) {
+    if (name && password) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ name, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
       if (response.ok) {
         // If successful, redirect the browser to the dashboard page
-        document.location.replace('api/dashboard');
+        document.location.replace('/api/dashboard');
       } else {
-        alert(response.statusText);
+        statusText.textContent = "Incorrect user name or password, please try again!"
       }
     }
   };
@@ -35,10 +36,9 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ name, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
       if (response.ok) {
         //then redirect the user to the dashboard 
-        document.location.replace('api/dashboard');
+        document.location.replace('/api/dashboard');
       } else {
         alert(response.statusText);
       }
