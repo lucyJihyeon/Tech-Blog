@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
     const dashboard = await Blog.findByPk(req.session.user_id);
     const blogData = dashboard.get({ plain: true });
     //render the data by passing it to dashboard.handlebars
-    res.render("dashboard", { blogData, loggedIn: req.session.loggedIn });
+    res.render("dashboard", { blogData, loggedIn: req.session.loggedIn, pageTitle: "Your Dashboard" });
   } catch (err) {
     res.status(400).json(err);
   }
