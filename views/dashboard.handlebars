@@ -1,7 +1,10 @@
-{{#if loggedIn }}
-<div class="list-group">
-{{#each blogData as |blog|}}
-  <a href="#" class="list-group-item list-group-item-action">{{blog.title}}    {{ format_date blog.date_created }}</a>
-{{/each}}
-
+{{#if logged_in }}
+    {{#if blogData }}
+        <div class="list-group">
+        {{#each blogData as |blog| }}
+        <a href="#" class="list-group-item list-group-item-action">{{blog.title}}    {{ format_date blog.date_created }}</a>
+        {{/each}}
+    {{/if}}
 {{/if}}
+
+<p> Dashboard testing</p>
