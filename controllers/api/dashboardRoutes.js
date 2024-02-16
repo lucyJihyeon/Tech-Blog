@@ -11,7 +11,7 @@ router.get("/", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    const blogData = dashboard.map((blog) => blog.get({ plain: true}));
+    const blogData = dashboard.map((blog) => blog.get({ plain: true }));
     //render the data by passing it to dashboard.handlebars
     res.render("dashboard", {
       blogData,
@@ -26,20 +26,22 @@ router.get("/", withAuth, async (req, res) => {
 //delete route to delete the blogpost with the matching id
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    //retreive the data with the maching id and user_id
-    const blogData = await Blog.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+    const blogData =
+      //retreive the data with the maching id and user_id
+      await Blog.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
     if (!blogData) {
       res.status(404).json({ message: "No Blog to delete!" });
       return;
     }
     //redirect the user to render the updated data
-    res.redirect(`/dashboard/${req.session.user_id}`);
+    //res.redirect("/api/dashboard");
+    res.status(200).json(blogData);
   } catch (err) {
+    console.log("error");
     res.status(400).json(err);
   }
 });

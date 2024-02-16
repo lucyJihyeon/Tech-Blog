@@ -1,6 +1,6 @@
 
-<button type="button" class="btn btn-outline-success">Edit</button>
-<button type="button" class="btn btn-outline-danger">Delete</button>
+<button type="button" class="btn btn-outline-success" id="edit" data-id="{{blogData.id}}">Edit</button>
+<button type="button" class="btn btn-outline-danger" id="delete" data-id="{{blogData.id}}">Delete</button>
 {{blogData.title}} 
 {{blogData.description}}
 {{#each blogData.comments as |comment|}}
@@ -10,6 +10,4 @@
     <p>Commented by: {{comment.user.name}}</p>
   </div>
 {{/each}}
-
-<script src="./js/dashboard.js"></script>
-
+<script src="/js/dashboard.js"></script>

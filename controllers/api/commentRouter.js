@@ -22,9 +22,7 @@ router.get("/:id", withAuth, async (req, res) => {
     //sending the data to comment handlebars
     const blogData = blog.get({ plain: true });
     res.render("comment", { blogData, logged_in: req.session.logged_in });
-    console.log("Processed blogData:", blogData);
   } catch (err) {
-    console.error("Error in GET /:id route:", err.message);
     res.status(500).json(err);
   }
 });
