@@ -37,11 +37,8 @@ router.delete("/:id", withAuth, async (req, res) => {
       res.status(404).json({ message: "No Blog to delete!" });
       return;
     }
-    //redirect the user to render the updated data
-    //res.redirect("/api/dashboard");
     res.status(200).json(blogData);
   } catch (err) {
-    console.log("error");
     res.status(400).json(err);
   }
 });
