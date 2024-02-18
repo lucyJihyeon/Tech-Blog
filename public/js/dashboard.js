@@ -10,10 +10,12 @@ const blogDetails = async (e) => {
   let blogId = e.target.getAttribute("data-id");
 
   // Implement the logic to fetch the blog details using the blogId
-  await fetch(`/api/comment/${blogId}`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-  });
+  // await fetch(`/api/comment/${blogId}`, {
+  //   method: "GET",
+  //   headers: { "Content-Type": "application/json" },
+  // });
+  window.location.href = `/api/comment/${blogId}`;
+
 };
 
 const handleDelete = async (e) => {
