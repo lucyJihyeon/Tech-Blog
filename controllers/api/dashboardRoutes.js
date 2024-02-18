@@ -43,19 +43,19 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
-//post route to create a new post
-router.post("/", withAuth, async (req, res) => {
-  try {
-    await Blog.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-    //redirect the user to render the updated data
-    res.redirect(`/dashboard/${req.session.user_id}`);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+// //post route to create a new post
+// router.post("/", withAuth, async (req, res) => {
+//   try {
+//     await Blog.create({
+//       ...req.body,
+//       user_id: req.session.user_id,
+//     });
+//     //redirect the user to render the updated data
+//     res.redirect(`/dashboard/${req.session.user_id}`);
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 //put route to update the existing blog post
 router.put("/:id", withAuth, async (req, res) => {

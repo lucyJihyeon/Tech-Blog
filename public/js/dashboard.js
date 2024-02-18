@@ -27,7 +27,6 @@ const handleDelete = async (e) => {
 };
 
 const handleCreateBlog = () => {
-  console.log('eventlistener is being called');
   window.location.href = '/api/blog';
   
 }
