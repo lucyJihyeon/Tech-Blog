@@ -80,3 +80,10 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 module.exports = router;
+
+// //if the user has filled out the necessary fields, update the data
+// if (req.body.title && req.body.description) {
+//   blog.title = req.body.title;
+//   blog.description = req.body.description;
+// }
+// await blog.save();
