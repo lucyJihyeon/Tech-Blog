@@ -7,16 +7,14 @@ const withAuth = require("../../utils/auth");
 router.get("/:id", withAuth, async (req, res) => {
   try {
     //retrieving datas from Blog model with matching id, as well as comment and user models
-    const blog = await Blog.findByPk(req.params.id)
-    // , {
-    //   include: [
-    //     {
-    //       model: Comment,
-    //       include: [User],
-    //     },
-    //   ],
-    //}
-    //);
+    const blog = await Blog.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
     if (!blog) {
       res.status(404).json({ message: "Blog post not found" });
       return;
