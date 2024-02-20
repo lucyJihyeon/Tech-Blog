@@ -3,11 +3,9 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 //when an user sends a get request to the ending 'api/users', render login handlebars
-router.get("/",(req, res)=> {
+router.get("/", (req, res) => {
   res.render("login");
 });
-
-
 
 //when an user sends a post request to the ending 'api/users'
 router.post("/", async (req, res) => {
@@ -24,13 +22,14 @@ router.post("/", async (req, res) => {
     });
   } catch (err) {
     //if the error involves a unique constraint violation,
-    if (err.name === "SequelizeUniqueConstraintError"){
-    res.status(409).json({
-      message: "User name already taken, please choose another"
-    });
+    if (err.name === "SequelizeUniqueConstraintError") {
+      res.status(409).json({
+        message: "User name already taken, please choose another",
+      });
+    } else {
+      res.status(400).json(err);
     }
-    res.status(400).json(err);
-  };
+  }
 });
 
 //when a user sends a post request to the ending 'api/users/login'
@@ -39,17 +38,17 @@ router.post("/login", async (req, res) => {
     //check the user data that matches the user name
     const userData = await User.findOne({ where: { name: req.body.name } });
 
-    //if the user name is not found in the data, send a response with a 400 status 
+    //if the user name is not found in the data, send a response with a 400 status
     if (!userData) {
       res
         .status(400)
         .json({ message: "Incorrect user name or password, please try again" });
       return;
     }
-    //check if the password is valid 
+    //check if the password is valid
     const validPassword = await userData.checkPassword(req.body.password);
 
-    //if not valid, send s a response with a 400 status 
+    //if not valid, send s a response with a 400 status
     if (!validPassword) {
       res
         .status(400)
@@ -73,7 +72,7 @@ router.post("/login", async (req, res) => {
 router.post("/logout", (req, res) => {
   //check if the user's log in status is true or false
   if (req.session.logged_in) {
-    //destroy the session data from the cookie 
+    //destroy the session data from the cookie
     req.session.destroy(() => {
       res.status(204).end();
     });
