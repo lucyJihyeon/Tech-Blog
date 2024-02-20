@@ -1,6 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-    const statusText = document.getElementById("status");
+    const statusText = document.querySelector(".status");
     statusText.textContent = "";
   
     // Collect values from the login form
