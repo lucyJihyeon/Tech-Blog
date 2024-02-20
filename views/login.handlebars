@@ -1,4 +1,4 @@
-<div class="row">
+{{! <div class="row">
   <div class="col-md-6">
     <h2>Login</h2>
 
@@ -34,6 +34,132 @@
       </div>
     </form>
   </div>
+</div>
+}}
+
+{{! <div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold">Login now!</h1>
+      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+    </div>
+    <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <form class="card-body login-form">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">User Name</span>
+          </label>
+          <input type="input" placeholder="user name" class="input input-bordered" id="name-login" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" placeholder="password" class="input input-bordered" id="password-login" required />
+        </div>
+        <label class="label">
+            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+          </label>
+
+        <div class="form-control mt-6">
+          <button class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> }}
+
+<style>
+  .wrapper-page { 
+    display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; 
+  background: url('/img/background.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  } 
+  .wrapper { 
+  margin: 10%;
+  background-color: transparent; 
+  min-height: 180px; 
+  width: 320px;
+  color: white;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 30px;
+  min-height: 380px;
+  backdrop-filter: blur(10px);
+  }
+  .wrapper h1 { font-size: 36px;
+  text-align: center; color: white; } .wrapper .input-box { position: relative; 100%; height:
+  50px; margin: 30px 0; } .input-box input{ color:white; padding:20px 45px 20px 20px;width: 100%; height: 100%; background-color: transparent; border: none; outline:
+  none; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 40px; }
+  .input-box input::placeholder{ color: white; } 
+  .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  }
+  .wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 19px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+
+</style>
+
+<div class="wrapper-page flex justify-center">
+  <div class="wrapper-login wrapper">
+    <form class="login-form">
+      <h1>Log In</h1>
+      <div class="input-box">
+        <input type="text" placeholder="user name" id="name-login" required />
+        <i class="bx bx-user"></i>
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="password"
+          id="password-login"
+          require
+        />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <p id="status"></p>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <div class="wrapper-sign wrapper">
+    <form class="signup-form">
+      <h1> Sign Up</h1>
+      <div class="input-box">
+        <input type="text" placeholder="user name" id="name-singup" required />
+        <i class="bx bx-user"></i>
+
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="password"
+          id="password-signup"
+          required
+        />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+  </div>
+
 </div>
 
 <script src="/js/login.js" defer></script>
