@@ -23,8 +23,14 @@ router.post("/", async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    //if the error involves a unique constraint violation,
+    if (err.name === "SequelizeUniqueConstraintError"){
+    res.status(409).json({
+      message: "User name already taken, please choose another"
+    });
+    }
     res.status(400).json(err);
-  }
+  };
 });
 
 //when a user sends a post request to the ending 'api/users/login'
