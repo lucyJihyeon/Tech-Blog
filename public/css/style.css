@@ -3,10 +3,16 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  /* background: url("/img/background.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+#login-bg {
   background: url("/img/background.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 .wrapper {
   margin: 7%;
   background-color: transparent;
