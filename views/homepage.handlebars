@@ -1,9 +1,18 @@
-{{#each blogposts as |blog|}}
-<div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">{{blog.title}}  posted by {{blog.user.name}} on {{ format_date blog.date_created}}</div>
-  <div class="card-body text-success">
-    <p class="card-text">{{blog.description}}</p>
+<div class="big-container-db">
+  <div class="container-db">
+    <div class="post">Explore Tech Blog</div>
+    <div class="list-group">
+      {{#each blogposts as |blog|}}
+        <button
+          class="detail-blog blog-title"
+          data-index="{{blog.id}}"
+        >{{blog.title}}
+          <div>posted by
+            {{blog.user.name}}
+            on
+            {{format_date blog.date_created}}</div>
+        </button>
+      {{/each}}
+    </div>
   </div>
 </div>
-{{/each}}
-
