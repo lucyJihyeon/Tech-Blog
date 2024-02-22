@@ -18,9 +18,9 @@
   <body id="login-bg">
   {{/if}}
 
-
+    {{#if pageTitle}}
     <header>
-      {{#if pageTitle}}
+      <!--dynamically generating a page title-->
       <button class="title">{{pageTitle}}
         {{!-- universe io button icon for the title  --}}
         <div class="icon-1">
@@ -54,7 +54,7 @@
               ></path></g></svg>
         </div>
       </button>
-      {{/if}}
+      
       <nav>
         <a href="/">Home</a>
         <a href="/api/dashboard">Dashboard</a>
@@ -65,9 +65,9 @@
         {{/if}}
         <div class="animation start-home"></div>
       </nav>
-      <!--dynamically generating a page title-->
-
+      
     </header>
+    {{/if}}
     <main>
       <!-- render the sub layout-->
       {{{body}}}
