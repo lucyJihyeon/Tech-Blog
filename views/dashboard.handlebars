@@ -3,9 +3,10 @@
     {{#if blogData }}
         <div class="container-db">
             <div class="list-group">
-            {{#each blogData as |blog| }}
-            <a href="/api/comment/{{blog.id}}" class="list-group-item list-group-item-action blog-title" data-id="{{blog.id}}" >{{blog.title}}    {{ format_date blog.date_created }}</a>
-            {{/each}}
+                {{#each blogData as |blog| }}
+                    <a href="/api/comment/{{blog.id}}" class="list-group-item list-group-item-action blog-title" data-id="{{blog.id}}" >{{blog.title}}    
+                    <div>{{ format_date blog.date_created }}</div></a>
+                {{/each}}
             </div>
         </div>
     {{/if}}
