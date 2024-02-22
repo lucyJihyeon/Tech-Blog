@@ -1,17 +1,29 @@
+:root{
+  --background-color: #1d2935;
+  --button-color: #d5a084;
+  --header-color: #FFDAD1;
+  --point-color: #FFEDDA;
+
+}
+
 .wrapper-page {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background: url("/img/background.jpeg") no-repeat;
-  background-size: cover;
-  background-position: center; */
 }
 #login-bg {
   background: url("/img/background.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
 }
+
+body {
+  background: url("/img/clouds.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 .wrapper {
   margin: 7%;
@@ -85,6 +97,7 @@
 }
 
 header {
+  margin: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -93,7 +106,7 @@ nav {
   margin: 15px;
   width: 335px;
   height: 55px;
-  background: #34495e;
+  background: var(--background-color);
   border-radius: 8px;
   font-size: 0;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
@@ -109,27 +122,27 @@ nav a {
   display: inline-block;
   text-align: center;
 }
-a:nth-child(1) {
+nav a:nth-child(1) {
   width: 100px;
 }
 nav .start-home,
-a:nth-child(1):hover ~ .animation {
+nav a:nth-child(1):hover ~ .animation {
   width: 100;
   left: 0;
 }
-a:nth-child(2) {
+nav a:nth-child(2) {
   width: 125px;
 }
 nav .start-dashboard,
-a:nth-child(2):hover ~ .animation {
+nav a:nth-child(2):hover ~ .animation {
   width: 125px;
   left: 100px;
 }
-a:nth-child(3) {
+nav a:nth-child(3) {
   width: 110px;
 }
 nav .start-log,
-a:nth-child(3):hover ~ .animation {
+nav a:nth-child(3):hover ~ .animation {
   width: 110px;
   left: 225px;
 }
@@ -138,7 +151,7 @@ nav .animation {
   height: 100%;
   top: 0;
   z-index: 0;
-  background-color: #d5a084;
+  background-color: var(--button-color);
   border-radius: 8px;
   transition: all 0.5s ease 0s;
 }
@@ -154,7 +167,7 @@ button {
   font-weight: bold;
   color: white;
   background-color: transparent;
-  border: 3px solid #34495e;
+  border: 3px solid var(--background-color);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s;
@@ -166,7 +179,7 @@ button::after {
   height: 100%;
   top: 10px;
   left: 10px;
-  background-color: #d5a084;
+  background-color: var(--button-color);
   border-radius: 8px;
   z-index: -1;
   transition: all 0.5s;
@@ -206,4 +219,38 @@ button:hover .icon-2 {
   left: -80px;
   transform: rotate(90deg);
   z-index: 1;
+}
+
+
+/*dashboard*/
+#create {
+  margin: 5% 8% 2% ;
+}
+
+/* container for the dashboard*/
+.container-db {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% 8% 2%;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 70px;
+}
+
+.container-db a {
+  border-radius: 8px;
+  border: 2px solid var(--button-color);
+  background-color: var(--background-color);
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  padding: 5%;
+  margin-top: 5%;
 }
