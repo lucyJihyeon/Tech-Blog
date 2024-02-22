@@ -20,7 +20,7 @@
 
 body {
   margin: 0;
-  background: url("/img/clouds.jpeg") no-repeat;
+  background: url("/img/background-circle.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -225,9 +225,11 @@ button:hover .icon-2 {
   z-index: 1;
 }
 
-/*dashboard*/
-#create {
-  margin: 5% 8% 2%;
+/*dashboard button container*/
+.btn-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* container for the dashboard*/
@@ -256,8 +258,8 @@ button:hover .icon-2 {
   color: white;
   text-decoration: none;
   font-size: larger;
-  padding: 5%;
-  margin: 5%;
+  padding: 3%;
+  margin: 3%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -277,6 +279,7 @@ button:hover .icon-2 {
   backdrop-filter: blur(10px);
 }
 
+/* post class element for a single posting  */
 .post {
   margin: 0;
   display: flex;
