@@ -1,10 +1,9 @@
-:root{
+:root {
   --background-color: #1d2935;
   --button-color: #d5a084;
-  --light-color: #FFDAD1;
-  --point-color: #FFEDDA;
-  --header-color : #ffdad1b6;
-
+  --light-color: #ffdad1;
+  --point-color: #ffedda;
+  --header-color: #ffdad1b6;
 }
 
 .wrapper-page {
@@ -26,7 +25,6 @@ body {
   background-position: center;
   z-index: 0;
 }
-
 
 .wrapper {
   margin: 7%;
@@ -227,10 +225,9 @@ button:hover .icon-2 {
   z-index: 1;
 }
 
-
 /*dashboard*/
 #create {
-  margin: 5% 8% 2% ;
+  margin: 5% 8% 2%;
 }
 
 /* container for the dashboard*/
@@ -260,7 +257,7 @@ button:hover .icon-2 {
   text-decoration: none;
   font-size: larger;
   padding: 5%;
-  margin-top: 5%;
+  margin: 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -270,4 +267,26 @@ button:hover .icon-2 {
   background-color: var(--button-color);
   transition: ease 0.5s;
   border: 2px solid var(--background-color);
+}
+
+/* big container */
+.container-db {
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
+  backdrop-filter: blur(10px);
+}
+
+.post {
+  margin: 0;
+  display: flex;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  width: inherit;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 35px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  color: var(--background-color);
 }
