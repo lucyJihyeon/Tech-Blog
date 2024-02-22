@@ -19,9 +19,11 @@
 }
 
 body {
+  margin: 0;
   background: url("/img/clouds.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 0;
 }
 
 
@@ -100,6 +102,7 @@ header {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  background-color: var(--point-color);
 }
 nav {
   position: relative;
@@ -157,7 +160,7 @@ nav .animation {
 }
 /*universe io */
 .title {
-  margin: 15px 0 0 10%;
+  margin: 15px 0 15px 10%;
 }
 button {
   margin: 0;
@@ -171,6 +174,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s;
+  z-index: 2;
 }
 button::after {
   content: "";
@@ -188,14 +192,15 @@ button:hover::after {
   top: 0;
   left: 0;
 }
+/*leaf icon on the title button*/
 .icon-1 {
   position: absolute;
   width: 15%;
-  top: 10px;
-  right: 15px;
+  top: 7px;
+  right: 20px;
   color: #2f5c2f;
   transform-origin: 100% 100%;
-  transform: rotate(-25deg) translateX(120%) translateY(20%);
+  transform: rotate(-60deg) translateX(160%) translateY(20%);
   z-index: -1;
   transition: all 0.5s;
 }
