@@ -1,6 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-    const statusText = document.getElementById("status");
+    const statusText = document.querySelector(".status");
     statusText.textContent = "";
   
     // Collect values from the login form
@@ -26,7 +26,8 @@ const loginFormHandler = async (event) => {
   //function to collect values from the signup form 
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+    const errText = document.querySelector(".err-msg");
+    errText.textContent = "";
     const name = document.querySelector('#name-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     //send a post request to the ending api/users to crate a new userdata
@@ -40,8 +41,9 @@ const loginFormHandler = async (event) => {
         //then redirect the user to the dashboard 
         document.location.replace('/api/dashboard');
       } else {
-        alert(response.statusText);
-      }
+        const result = await response.json();
+        errText.textContent = result.message;
+      } 
     }
   };
   
