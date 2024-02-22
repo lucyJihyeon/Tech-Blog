@@ -53,7 +53,7 @@
         
 
       </style>
-
+      {{#if pageTitle}}
       <button class="title">{{pageTitle}}
         <div class="icon-1">
           <svg
@@ -86,6 +86,7 @@
               ></path></g></svg>
         </div>
       </button>
+      {{/if}}
       <nav>
         <a href="/">Home</a>
         <a href="/api/dashboard">Dashboard</a>
