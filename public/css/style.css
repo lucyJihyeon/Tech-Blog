@@ -3,7 +3,7 @@
   --button-color: #d5a084;
   --light-color: #ffdad1;
   --point-color: #ffedda;
-  --header-color: #ffdad1b6;
+  --header-color: #ffdad1;
 }
 
 .wrapper-page {
@@ -374,8 +374,70 @@ nav .animation {
   transform: translateY(0px);
   transition-duration: 0.3s;
 }
+/* universe io for the comments */
+.bookmarkBtn {
+  margin: 5% 8% 2%;
+  width: 130px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
+}
 
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .3s;
+}
 
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: .3s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 120px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: .3s;
+}
 /* container for the dashboard*/
 .container-db {
   display: flex;
@@ -438,3 +500,12 @@ nav .animation {
   color: var(--background-color);
 }
 
+/* blog post details */
+.detail {
+  margin: 5% 8% 2%;
+}
+
+/* comments container in comment.handlebar */
+.comments{
+  display: none;
+}
