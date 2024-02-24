@@ -1,4 +1,4 @@
-const refresh = document.querySelector(".title");
+const refresh = document.querySelector("#title");
 
 //function to refresh the window when clicked.
 const refreshHandler = () => {
