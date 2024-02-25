@@ -1,6 +1,6 @@
 const blogs = document.querySelectorAll(".blog-title");
 const deleteBtn = document.getElementById("delete");
-const createBtn = document.getElementById("create");
+const createBtn = document.querySelector(".create");
 const editBtn = document.getElementById("edit");
 const commentBtn = document.querySelector(".bookmarkBtn");
 
