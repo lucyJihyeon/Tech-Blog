@@ -32,6 +32,7 @@ const editHandler = async (e) => {
   window.location.href = `/api/blog/${blogId}`;
 };
 
+//functino to display all the comments when clicked
 const displayComments = () => {
   const cmtContainer = document.querySelector(".comments");
   cmtContainer.style.display = "flex";

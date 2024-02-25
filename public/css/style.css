@@ -508,4 +508,17 @@ nav .animation {
 /* comments container in comment.handlebar */
 .comments{
   display: none;
+  flex-direction: column;
+}
+/* individual comment container */
+.ind-comment  {
+ display: flex;
+ flex-direction: column;
+ margin: 5% 8% 2%;
+}
+
+/* container for user info in the comment section */
+.comment-user {
+  display: flex;
+  flex-direction: row;
 }
