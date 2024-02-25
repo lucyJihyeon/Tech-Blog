@@ -2,6 +2,7 @@ const blogs = document.querySelectorAll(".blog-title");
 const deleteBtn = document.getElementById("delete");
 const createBtn = document.getElementById("create");
 const editBtn = document.getElementById("edit");
+const commentBtn = document.querySelector(".bookmarkBtn");
 
 //function to handle event listener
 const blogDetails = async (e) => {
@@ -27,10 +28,15 @@ const handleCreateBlog = () => {
 
 const editHandler = async (e) => {
   e.preventDefault();
-  console.log("edit handler called");
   let blogId = e.target.getAttribute("data-id");
   window.location.href = `/api/blog/${blogId}`;
 };
+
+//functino to display all the comments when clicked
+const displayComments = () => {
+  const cmtContainer = document.querySelector(".comments");
+  cmtContainer.style.display = "flex";
+}
 
 // add an event listener to the blog listed in the dashboard
 blogs.forEach((blog) => {
@@ -45,3 +51,7 @@ if (createBtn) {
 if (editBtn) {
   editBtn.addEventListener("click", editHandler);
 };
+
+if(commentBtn)  {
+  commentBtn.addEventListener("click", displayComments);
+}

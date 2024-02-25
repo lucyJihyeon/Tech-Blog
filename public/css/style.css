@@ -1,9 +1,17 @@
+/* Universal selector */
+* {
+  font-family: "Arimo", sans-serif;
+}
+
+
+/* custom color  */
 :root {
   --background-color: #1d2935;
   --button-color: #d5a084;
-  --light-color: #ffdad1;
+  --light-color: #ffdad195;
   --point-color: #ffedda;
-  --header-color: #ffdad1b6;
+  --header-color: #ffdad1;
+  --container-color: rgba(255, 255, 255, 0.2);
 }
 
 .wrapper-page {
@@ -33,7 +41,7 @@ body {
   width: 320px;
   color: white;
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   padding: 20px 30px;
   min-height: 380px;
   backdrop-filter: blur(10px);
@@ -57,7 +65,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   border-radius: 8px;
 }
 .input-box input::placeholder {
@@ -129,13 +137,13 @@ nav a:nth-child(1) {
 }
 nav .start-home,
 nav a:nth-child(1):hover ~ .animation {
-  width: 100;
+  width: 100px;
   left: 0;
 }
 nav a:nth-child(2) {
   width: 125px;
 }
-nav .start-dashboard,
+
 nav a:nth-child(2):hover ~ .animation {
   width: 125px;
   left: 100px;
@@ -143,7 +151,7 @@ nav a:nth-child(2):hover ~ .animation {
 nav a:nth-child(3) {
   width: 110px;
 }
-nav .start-log,
+
 nav a:nth-child(3):hover ~ .animation {
   width: 110px;
   left: 225px;
@@ -235,6 +243,209 @@ nav .animation {
   align-items: center;
 }
 
+/* buttons container for comment handlebars */
+.btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 5% 8% 2%;
+}
+/* all the descendants of btns-container has a margin-left of 5% */
+.btns-container > * {
+  margin-left: 5%;
+}
+
+
+/* universe-io for the edit button */
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(0, 173, 49);
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+/* Universe io delete button */
+.delete-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.delete-button:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button::before {
+  display: none;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+/* universe io for the comments */
+.bookmarkBtn {
+  margin: 5% 8% 2%;
+  width: 130px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
+}
+
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(226,181,163,255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: .3s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 120px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: .3s;
+}
 /* container for the dashboard*/
 .container-db {
   display: flex;
@@ -277,7 +488,7 @@ nav .animation {
 /* big container */
 .container-db {
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   padding: 0;
   backdrop-filter: blur(10px);
 }
@@ -289,7 +500,7 @@ nav .animation {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   width: inherit;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--container-color);
   font-size: 35px;
   text-align: center;
   justify-content: center;
@@ -297,3 +508,33 @@ nav .animation {
   color: var(--background-color);
 }
 
+/* blog post details */
+.detail, .ind-comment{
+  margin: 5% 8% 2%;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.5;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 3%;
+  color: var(--background-color);
+  border: 2px solid var(--container-color);
+}
+
+/* comments container in comment.handlebar */
+.comments{
+  display: none;
+  flex-direction: column;
+}
+
+/* individual comment container */
+.ind-comment  {
+ display: flex;
+ flex-direction: column;
+}
+
+/* container for user info in the comment section */
+.comment-user {
+  display: flex;
+  flex-direction: row;
+}
