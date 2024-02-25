@@ -1,9 +1,17 @@
+/* Universal selector */
+* {
+  font-family: "Arimo", sans-serif;
+}
+
+
+/* custom color  */
 :root {
   --background-color: #1d2935;
   --button-color: #d5a084;
-  --light-color: #ffdad1;
+  --light-color: #ffdad195;
   --point-color: #ffedda;
   --header-color: #ffdad1;
+  --container-color: rgba(255, 255, 255, 0.2);
 }
 
 .wrapper-page {
@@ -33,7 +41,7 @@ body {
   width: 320px;
   color: white;
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   padding: 20px 30px;
   min-height: 380px;
   backdrop-filter: blur(10px);
@@ -57,7 +65,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   border-radius: 8px;
 }
 .input-box input::placeholder {
@@ -129,13 +137,13 @@ nav a:nth-child(1) {
 }
 nav .start-home,
 nav a:nth-child(1):hover ~ .animation {
-  width: 100;
+  width: 100px;
   left: 0;
 }
 nav a:nth-child(2) {
   width: 125px;
 }
-nav .start-dashboard,
+
 nav a:nth-child(2):hover ~ .animation {
   width: 125px;
   left: 100px;
@@ -143,7 +151,7 @@ nav a:nth-child(2):hover ~ .animation {
 nav a:nth-child(3) {
   width: 110px;
 }
-nav .start-log,
+
 nav a:nth-child(3):hover ~ .animation {
   width: 110px;
   left: 225px;
@@ -394,7 +402,7 @@ nav .animation {
 .IconContainer {
   width: 30px;
   height: 30px;
-  background-color: var(--button-color);
+  background-color: rgba(226,181,163,255);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -480,7 +488,7 @@ nav .animation {
 /* big container */
 .container-db {
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--container-color);
   padding: 0;
   backdrop-filter: blur(10px);
 }
@@ -492,7 +500,7 @@ nav .animation {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   width: inherit;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--container-color);
   font-size: 35px;
   text-align: center;
   justify-content: center;
@@ -501,8 +509,16 @@ nav .animation {
 }
 
 /* blog post details */
-.detail {
+.detail, .ind-comment{
   margin: 5% 8% 2%;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.5;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 3%;
+  color: var(--background-color);
+  border: 2px solid var(--container-color);
 }
 
 /* comments container in comment.handlebar */
@@ -510,11 +526,11 @@ nav .animation {
   display: none;
   flex-direction: column;
 }
+
 /* individual comment container */
 .ind-comment  {
  display: flex;
  flex-direction: column;
- margin: 5% 8% 2%;
 }
 
 /* container for user info in the comment section */
