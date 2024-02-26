@@ -458,7 +458,6 @@ nav .animation {
   margin: 5% 8% 2%;
   align-items: stretch;
   padding: 5%;
-  overflow: auto;
   border-radius: 12px;
   border: 2px solid var(--container-color);
   padding: 0;
@@ -568,6 +567,7 @@ nav .animation {
   background: transparent;
   transition: 0.1s ease;
   z-index: 1111;
+  height: max-content;
 }
 
 .labelline  {
@@ -598,7 +598,18 @@ nav .animation {
   background-color: var(--background-color); 
   
 }
-
-.edit-container{
-  height: max-content;
+.input:focus + .labelline, .labelline  {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  transform: translate(-15px, -16px) scale(0.88);
+  z-index: 1111;
+  background-color: var(--background-color); 
+  
 }
+
+.input-container  {
+  margin-bottom: 5%;
+}
+

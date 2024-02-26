@@ -11,7 +11,7 @@
   <input type="hidden" id="blogId" value="{{blogPost.id}}">
   <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
 </form> --}}
-<div class="container-db edit-container">
+<div class="container-db">
   <div class="post">Edit my post</div>
     <div class="container-content">
       <form id="edit-form">
@@ -27,8 +27,10 @@
             <div class="labelline">Description</div>
           </div>
         </div>
-        <input type="hidden" id="blogId" value="{{blogPost.id}}">
-        <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
+        <div class="update-container">
+          <input type="hidden" id="blogId" value="{{blogPost.id}}">
+          <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
+          </div>
       </form>
     </div>
 </div>
