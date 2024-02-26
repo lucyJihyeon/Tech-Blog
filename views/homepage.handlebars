@@ -1,18 +1,20 @@
 <div class="big-container-db">
   <div class="container-db">
     <div class="post">Explore Tech Blog</div>
-    <div class="list-group">
-      {{#each blogposts as |blog|}}
-        <button
-          class="detail-blog blog-title"
-          data-index="{{blog.id}}"
-        >{{blog.title}}
-          <div>posted by
-            {{blog.user.name}}
-            on
-            {{format_date blog.date_created}}</div>
-        </button>
-      {{/each}}
+    <div class="container-content">
+      <div class="list-group">
+        {{#each blogposts as |blog|}}
+          <button
+            class="detail-blog blog-title"
+            data-index="{{blog.id}}"
+          >{{blog.title}}
+            <div>posted by
+              {{blog.user.name}}
+              on
+              {{format_date blog.date_created}}</div>
+          </button>
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>
