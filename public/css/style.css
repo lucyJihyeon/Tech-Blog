@@ -467,6 +467,7 @@ nav .animation {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+  padding: 3%;
 }
 
 /* a element selector inside  of the container-db*/
