@@ -495,7 +495,6 @@ nav .animation {
   border: 2px solid var(--container-color);
   padding: 0;
   backdrop-filter: blur(10px);
-  min-height: 310px;
 }
 
 .container-content {
