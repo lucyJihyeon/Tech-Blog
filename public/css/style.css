@@ -532,6 +532,7 @@ nav .animation {
 .ind-comment  {
  display: flex;
  flex-direction: column;
+ margin-bottom: 1%;
 }
 
 /* container for user info in the comment section */
