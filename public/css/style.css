@@ -451,12 +451,14 @@ nav .animation {
 
 /* container for the dashboard*/
 .container-db {
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-
+  margin: 5% 8% 2%;
+  align-items: stretch;
+  padding: 5%;
+  border-radius: 12px;
+  border: 2px solid var(--container-color);
+  padding: 0;
+  backdrop-filter: blur(10px);
+  min-height: 50vh;
 }
 
 /*dashboard blog title list */
@@ -465,7 +467,6 @@ nav .animation {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  min-height: 70px;
 }
 
 /* a element selector inside  of the container-db*/
@@ -480,6 +481,7 @@ nav .animation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 2%;
 }
 /*style when each of the a element is hovered */
 .blog-title:hover, .create-commentBtn:hover {
@@ -488,14 +490,6 @@ nav .animation {
   border: 2px solid var(--background-color);
 }
 
-/* big container */
-.container-db {
-  border-radius: 12px;
-  border: 2px solid var(--container-color);
-  padding: 0;
-  backdrop-filter: blur(10px);
-  min-height: 310px;
-}
 
 .container-content {
   padding: 5%;
@@ -558,7 +552,7 @@ nav .animation {
   line-height: 80px;
 }
 
-#blog-title {
+.input {
   position: absolute;
   width: 100%;
   outline: none;
@@ -566,7 +560,7 @@ nav .animation {
   padding: 0 30px;
   line-height: 80px;
   border-radius: 8px;
-  border: 2px solid var(--background-color);
+  border: 4px solid var(--background-color);
   background: transparent;
   transition: 0.1s ease;
   z-index: 1111;
@@ -583,14 +577,14 @@ nav .animation {
   transition: 0.2s ease;
 }
 
-
-#blog-title:focus, #blog-title:valid{
+/* when the input area is focus and valid, changed the styling */
+.input:focus, .input:valid{
   color: var(--background-color);
   border: 4px solid var(--button-color);
 
 }
 
-#blog-title:focus + .labelline, #blog-title:valid + .labelline  {
+.input:focus + .labelline, .input:valid + .labelline  {
   color: white;
   height: 30px;
   line-height: 30px;
@@ -653,4 +647,3 @@ textarea {
   justify-content: space-between; 
   height: 50%; 
 }
-
