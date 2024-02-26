@@ -254,7 +254,7 @@ nav .animation {
 }
 /* all the descendants of btns-container has a margin-left of 5% */
 .btns-container > * {
-  margin-left: 5%;
+  margin: 1% 0 0 5%;
 }
 
 
@@ -398,7 +398,7 @@ nav .animation {
   transition-duration: .3s;
   overflow: hidden;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
-  margin-top: 1%;
+  margin: 1% 0;
 }
 
 .IconContainer {
@@ -495,8 +495,8 @@ nav .animation {
   border: 2px solid var(--container-color);
   padding: 0;
   backdrop-filter: blur(10px);
+  min-height: 310px;
 }
-
 
 .container-content {
   padding: 5%;
