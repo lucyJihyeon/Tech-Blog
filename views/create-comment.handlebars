@@ -1,0 +1,30 @@
+<div class="container-db">
+  <div class="post">{{blogData.title}}</div>
+    <div class="create-comment-container">
+        <div class="container-content">
+            <div class="detail">{{blogData.description}}</div>
+            <form id="comment-form">
+                <div class="input-container">
+                <div class="entry-area">
+                    <textarea
+                    type="text"
+                    id="commenting"
+                    class="input"
+                    required
+                    ></textarea>
+                    <div class="labelline">Comment</div>
+                </div>
+                </div>
+                <div class="update-container">
+                <input type="hidden" id="blogId" value="{{blogData.id}}" />
+                <button
+                    type="submit"
+                    class="blog-title"
+                    id="commentingBtn"
+                >Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>

@@ -24,7 +24,13 @@
             <p>{{comment.description}}</p>
           </div>
         {{/each}}
+          {{#if comment }}
+            <div class="create-comment">
+              <button class="create-commentBtn" data-id="{{blogData.id}}"> Make a Comment</button>
+            </div>
+          {{/if}}
       </div>
+      {{#unless comment}}
       <div class="btns-container">
         <button
           type="button"
@@ -47,6 +53,9 @@
             ></path>
           </svg></button>
       </div>
+      {{/unless}}
+
+
     </div>
   </div>
 </div>

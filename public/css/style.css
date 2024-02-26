@@ -451,13 +451,12 @@ nav .animation {
 
 /* container for the dashboard*/
 .container-db {
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 5% 8% 2%;
-  align-items: stretch;
-  padding: 5%;
+
 }
 
 /*dashboard blog title list */
@@ -470,7 +469,7 @@ nav .animation {
 }
 
 /* a element selector inside  of the container-db*/
-.blog-title{
+.blog-title, .create-commentBtn{
   border-radius: 8px;
   border: 2px solid var(--button-color);
   background-color: var(--background-color);
@@ -483,7 +482,7 @@ nav .animation {
   justify-content: space-between;
 }
 /*style when each of the a element is hovered */
-.blog-title:hover {
+.blog-title:hover, .create-commentBtn:hover {
   background-color: var(--button-color);
   transition: ease 0.5s;
   border: 2px solid var(--background-color);
@@ -539,6 +538,7 @@ nav .animation {
 .ind-comment  {
  display: flex;
  flex-direction: column;
+ margin-bottom: 1%;
 }
 
 /* container for user info in the comment section */
@@ -600,3 +600,57 @@ nav .animation {
   background-color: var(--background-color); 
   
 }
+.input:focus + .labelline, .labelline  {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  transform: translate(-15px, -16px) scale(0.88);
+  z-index: 1111;
+  background-color: var(--background-color); 
+  
+}
+
+.input-container  {
+  margin-bottom: 5%;
+}
+
+textarea {
+  min-height: 80px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+.update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-form, #create-form{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#edit-form button, #create-form button {
+  margin-top: 2%;
+}
+
+.create-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+/* styling for comment-form's textarea*/
+#comment-form {
+  margin: 5% 0 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 50%; 
+}
+
