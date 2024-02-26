@@ -34,7 +34,8 @@ router.get("/:id", withAuth, async (req, res) => {
     const blogPost = blog.get({ plain: true });
     let isEdit = true;
     blogPost.edit = isEdit;
-    res.render("blog", { blogPost, pageTitle:"My Blog" });
+    console.log(blogPost);
+    res.render("blog", { blogPost });
   } catch (err) {
     res.status(400).json(err);
   }

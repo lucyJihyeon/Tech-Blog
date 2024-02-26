@@ -1,34 +1,23 @@
 {{#if blogPost.edit }}
-<div class="container-db">
-  <div class="post">Edit my post</div>
-    <div class="container-content">
-      <form id="edit-form">
-        <div class="input-container">
-          <div class="entry-area">
-            <input type="text" id="blog-title" class="input" value="{{blogPost.title}}" required>
-            <div class="labelline">Title</div>
-          </div>
-        </div>
-        <div class="input-container">
-          <div class="entry-area">
-            <textarea type="text" id="description" class="input" required>{{blogPost.description}}</textarea>
-            <div class="labelline">Description</div>
-          </div>
-        </div>
-        <div class="update-container">
-          <input type="hidden" id="blogId" value="{{blogPost.id}}">
-          <button type="submit" class="blog-title" id="updateBtn">Update</button>
-          </div>
-      </form>
-    </div>
+<form id="edit-form">
+    <div class="mb-3">
+  <label for="blog-title" class="form-label" >Title</label>
+  <input type="input" class="form-control" id="blog-title" value="{{blogPost.title}}" required>
 </div>
+<div class="mb-3">
+  <label for="description" class="form-label">Content</label>
+  <textarea class="form-control" id="description" rows="3" required>{{blogPost.description}}</textarea>
+</div>
+  <input type="hidden" id="blogId" value="{{blogPost.id}}">
+  <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
+</form>
 
 
 <script src="/js/editBlog.js"></script>
 
 
 {{else}}
-{{!-- 
+
 <form id="create-form">
     <div class="mb-3">
   <label for="blog-title" class="form-label" >Title</label>
@@ -39,31 +28,7 @@
   <textarea class="form-control" id="description" rows="3"></textarea>
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form> --}}
-
-
-<div class="container-db">
-  <div class="post">Create a post</div>
-    <div class="container-content">
-      <form id="create-form">
-        <div class="input-container">
-          <div class="entry-area">
-            <input type="text" id="blog-title" class="input" required>
-            <div class="labelline">Title</div>
-          </div>
-        </div>
-        <div class="input-container">
-          <div class="entry-area">
-            <textarea type="text" id="description" class="input" required></textarea>
-            <div class="labelline">Description</div>
-          </div>
-        </div>
-        <div class="update-container">
-          <button type="submit" class="blog-title" id="updateBtn">Create</button>
-          </div>
-      </form>
-    </div>
-</div>
+</form>
 
 <script src="/js/blog.js"></script>
 

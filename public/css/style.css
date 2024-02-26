@@ -454,15 +454,10 @@ nav .animation {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 5% 8% 2%;
   align-items: stretch;
   padding: 5%;
-  border-radius: 12px;
-  border: 2px solid var(--container-color);
-  padding: 0;
-  backdrop-filter: blur(10px);
-  min-height: 50vh;
 }
 
 /*dashboard blog title list */
@@ -471,6 +466,7 @@ nav .animation {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+  min-height: 70px;
 }
 
 /* a element selector inside  of the container-db*/
@@ -485,7 +481,6 @@ nav .animation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 2%;
 }
 /*style when each of the a element is hovered */
 .blog-title:hover {
@@ -494,6 +489,14 @@ nav .animation {
   border: 2px solid var(--background-color);
 }
 
+/* big container */
+.container-db {
+  border-radius: 12px;
+  border: 2px solid var(--container-color);
+  padding: 0;
+  backdrop-filter: blur(10px);
+  min-height: 310px;
+}
 
 .container-content {
   padding: 5%;
@@ -555,7 +558,7 @@ nav .animation {
   line-height: 80px;
 }
 
-.input {
+#blog-title {
   position: absolute;
   width: 100%;
   outline: none;
@@ -563,7 +566,7 @@ nav .animation {
   padding: 0 30px;
   line-height: 80px;
   border-radius: 8px;
-  border: 4px solid var(--background-color);
+  border: 2px solid var(--background-color);
   background: transparent;
   transition: 0.1s ease;
   z-index: 1111;
@@ -580,14 +583,14 @@ nav .animation {
   transition: 0.2s ease;
 }
 
-/* when the input area is focus and valid, changed the styling */
-.input:focus, .input:valid{
+
+#blog-title:focus, #blog-title:valid{
   color: var(--background-color);
   border: 4px solid var(--button-color);
 
 }
 
-.input:focus + .labelline, .input:valid + .labelline  {
+#blog-title:focus + .labelline, #blog-title:valid + .labelline  {
   color: white;
   height: 30px;
   line-height: 30px;
@@ -596,41 +599,4 @@ nav .animation {
   z-index: 1111;
   background-color: var(--background-color); 
   
-}
-.input:focus + .labelline, .labelline  {
-  color: white;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 12px;
-  transform: translate(-15px, -16px) scale(0.88);
-  z-index: 1111;
-  background-color: var(--background-color); 
-  
-}
-
-.input-container  {
-  margin-bottom: 5%;
-}
-
-textarea {
-  min-height: 80px;
-  max-height: 300px;
-  resize: vertical;
-}
-
-.update-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#edit-form, #create-form{
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-#edit-form button, #create-form button {
-  margin-top: 2%;
 }
