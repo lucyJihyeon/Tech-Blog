@@ -3,6 +3,7 @@ const deleteBtn = document.getElementById("delete");
 const createBtn = document.querySelector(".create");
 const editBtn = document.getElementById("edit");
 const commentBtn = document.querySelector(".bookmarkBtn");
+const createCommentBtn = document.querySelector('.create-commentBtn');
 
 //function to handle event listener
 const blogDetails = async (e) => {
@@ -38,6 +39,13 @@ const displayComments = () => {
   cmtContainer.style.display = "flex";
 }
 
+//function to redirect the user to send a get request to the new href url 
+const createCommentHandler = (e) => {
+  e.preventDefault();
+  const blogId = e.currentTarget.getAttribute("data-id");
+  window.location.href = `api/comment/create-comment/${blogId}`;
+};
+
 // add an event listener to the blog listed in the dashboard
 blogs.forEach((blog) => {
   blog.addEventListener("click", blogDetails);
@@ -54,4 +62,8 @@ if (editBtn) {
 
 if(commentBtn)  {
   commentBtn.addEventListener("click", displayComments);
+};
+
+if(createCommentBtn)  {
+  createCommentBtn.addEventListener("click", createCommentHandler);
 }

@@ -52,6 +52,23 @@ router.get("/:id", withAuth, async (req, res) => {
   }
  });
 
+ //GET route to redirect the user to create a new comment 
+router.get("/create-comment/:id", withAuth, async (req, res) => {
+  try {
+    const blog = await Blog.findByPk(req.params.id);
+    if (!blog) {
+      res.status(404).json({ message: "Blog post not found" });
+      return;
+    }
+     //sending the data to comment handlebars
+     const blogData = blog.get({ plain: true });
+     res.render("create-comment", { blogData, logged_in: req.session.logged_in, pageTitle: "Comment" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
 //POST route with withAuth middleware
 router.post("/:id", withAuth, async (req, res) => {
   try {

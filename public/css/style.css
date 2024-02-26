@@ -470,7 +470,7 @@ nav .animation {
 }
 
 /* a element selector inside  of the container-db*/
-.blog-title{
+.blog-title, .create-commentBtn{
   border-radius: 8px;
   border: 2px solid var(--button-color);
   background-color: var(--background-color);
@@ -484,7 +484,7 @@ nav .animation {
   margin-bottom: 2%;
 }
 /*style when each of the a element is hovered */
-.blog-title:hover {
+.blog-title:hover, .create-commentBtn:hover {
   background-color: var(--button-color);
   transition: ease 0.5s;
   border: 2px solid var(--background-color);
@@ -631,4 +631,10 @@ textarea {
   margin-top: 2%;
 }
 
+.create-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
 
