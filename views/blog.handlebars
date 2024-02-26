@@ -1,5 +1,5 @@
 {{#if blogPost.edit }}
-<form id="edit-form">
+{{!-- <form id="edit-form">
     <div class="mb-3">
   <label for="blog-title" class="form-label" >Title</label>
   <input type="input" class="form-control" id="blog-title" value="{{blogPost.title}}" required>
@@ -10,7 +10,28 @@
 </div>
   <input type="hidden" id="blogId" value="{{blogPost.id}}">
   <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
-</form>
+</form> --}}
+<div class="container-db">
+  <div class="post">Edit my post</div>
+  <div class="container-content">
+    <form id="edit-form">
+      <div class="input-container">
+        <div class="entry-area">
+          <input type="text" id="blog-title" value="{{blogPost.title}}" required>
+          <div class="labelline">Title</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="entry-area">
+          <textarea type="text" id="description" required>{{blogPost.description}}</textarea>
+          <div class="labelline">Description</div>
+        </div>
+      </div>
+      <input type="hidden" id="blogId" value="{{blogPost.id}}">
+      <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
+    </form>
+  </div>
+</div>
 
 
 <script src="/js/editBlog.js"></script>
