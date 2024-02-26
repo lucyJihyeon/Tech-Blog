@@ -451,10 +451,6 @@ nav .animation {
 
 /* container for the dashboard*/
 .container-db {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   margin: 5% 8% 2%;
   align-items: stretch;
   padding: 5%;
@@ -634,3 +630,5 @@ textarea {
 #edit-form button, #create-form button {
   margin-top: 2%;
 }
+
+
