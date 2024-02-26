@@ -454,11 +454,16 @@ nav .animation {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 5% 8% 2%;
   align-items: stretch;
   padding: 5%;
   overflow: auto;
+  border-radius: 12px;
+  border: 2px solid var(--container-color);
+  padding: 0;
+  backdrop-filter: blur(10px);
+  min-height: 50vh;
 }
 
 /*dashboard blog title list */
@@ -490,13 +495,6 @@ nav .animation {
   border: 2px solid var(--background-color);
 }
 
-/* big container */
-.container-db {
-  border-radius: 12px;
-  border: 2px solid var(--container-color);
-  padding: 0;
-  backdrop-filter: blur(10px);
-}
 
 .container-content {
   padding: 5%;
@@ -558,7 +556,7 @@ nav .animation {
   line-height: 80px;
 }
 
-#blog-title {
+.input {
   position: absolute;
   width: 100%;
   outline: none;
@@ -583,14 +581,14 @@ nav .animation {
   transition: 0.2s ease;
 }
 
-
-#blog-title:focus, #blog-title:valid{
+/* when the input area is focus and valid, changed the styling */
+.input:focus, .input:valid{
   color: var(--background-color);
   border: 4px solid var(--button-color);
 
 }
 
-#blog-title:focus + .labelline, #blog-title:valid + .labelline  {
+.input:focus + .labelline, .input:valid + .labelline  {
   color: white;
   height: 30px;
   line-height: 30px;
@@ -599,4 +597,8 @@ nav .animation {
   z-index: 1111;
   background-color: var(--background-color); 
   
+}
+
+.edit-container{
+  height: max-content;
 }
