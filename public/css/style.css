@@ -398,7 +398,6 @@ nav .animation {
   transition-duration: .3s;
   overflow: hidden;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
-  margin-top: 1%;
 }
 
 .IconContainer {
@@ -495,8 +494,8 @@ nav .animation {
   border: 2px solid var(--container-color);
   padding: 0;
   backdrop-filter: blur(10px);
+  min-height: 310px;
 }
-
 
 .container-content {
   padding: 5%;
