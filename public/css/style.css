@@ -567,7 +567,6 @@ nav .animation {
   background: transparent;
   transition: 0.1s ease;
   z-index: 1111;
-  height: max-content;
 }
 
 .labelline  {
@@ -613,3 +612,25 @@ nav .animation {
   margin-bottom: 5%;
 }
 
+textarea {
+  min-height: 80px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+.update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-form, #create-form{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#edit-form button, #create-form button {
+  margin-top: 2%;
+}
