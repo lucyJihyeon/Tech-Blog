@@ -43,7 +43,7 @@ const displayComments = () => {
 const createCommentHandler = (e) => {
   e.preventDefault();
   const blogId = e.currentTarget.getAttribute("data-id");
-  window.location.href = `api/comment/create-comment/${blogId}`;
+  window.location.href = `/api/comment/create-comment/${blogId}`;
 };
 
 // add an event listener to the blog listed in the dashboard
