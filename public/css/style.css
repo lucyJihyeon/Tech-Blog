@@ -458,6 +458,7 @@ nav .animation {
   margin: 5% 8% 2%;
   align-items: stretch;
   padding: 5%;
+  overflow: auto;
 }
 
 /*dashboard blog title list */
@@ -466,7 +467,6 @@ nav .animation {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  min-height: 70px;
 }
 
 /* a element selector inside  of the container-db*/
@@ -481,6 +481,7 @@ nav .animation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 2%;
 }
 /*style when each of the a element is hovered */
 .blog-title:hover {
