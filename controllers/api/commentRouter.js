@@ -78,7 +78,7 @@ router.post("/:id", withAuth, async (req, res) => {
       user_id: req.session.user_id,
       blog_id: req.params.id,
     });
-    res.redirect(`/comment/${req.params.id}`);
+    res.redirect(`/api/comment/create/${req.params.id}`);
   } catch (err) {
     res.status(400).json(err);
   }

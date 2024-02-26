@@ -1,3 +1,4 @@
+//function to create a blog post 
 const createHandler = async (e) => {
   e.preventDefault();
 
