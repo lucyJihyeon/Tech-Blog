@@ -1,26 +1,21 @@
-{{#if logged_in}}
-  {{#if blogData}}
-    <div class="bg-container-db">
-      <div class="container-db">
-        <div class="post">My Blog Post</div>
-        <div class="container-content">
-          <div class="list-group">
-            {{#each blogData as |blog|}}
-              <a
-                href="/api/comment/{{blog.id}}"
-                class="list-group-item list-group-item-action blog-title"
-                data-id="{{blog.id}}"
-              >{{blog.title}}
-                <div>{{format_date blog.date_created}}</div></a>
-            {{/each}}
-          </div>
+{{#if logged_in }}
+    {{#if blogData }}
+        <div class="bg-container-db">
+            <div class="container-db">
+                <div class="post">My Blog Post</div>
+                <div class="list-group">
+                    {{#each blogData as |blog| }}
+                        <a href="/api/comment/{{blog.id}}" class="list-group-item list-group-item-action blog-title" data-id="{{blog.id}}" >{{blog.title}}    
+                        <div>{{ format_date blog.date_created }}</div></a>
+                    {{/each}}
+                </div>
+            </div>
         </div>
-      </div>
+    {{/if}}
+    <div class="btn-container">
+        <button type="button" class="button-action create">Create a Post</button>
     </div>
-  {{/if}}
-  <div class="btn-container">
-    <button type="button" class="button-action create">Create a Post</button>
-  </div>
 {{/if}}
 
 <script src="/js/dashboard.js"></script>
+
