@@ -35,7 +35,7 @@ router.get("/:id", withAuth, async (req, res) => {
     let isEdit = true;
     blogPost.edit = isEdit;
     console.log(blogPost);
-    res.render("blog", { blogPost });
+    res.render("blog", { blogPost, pageTitle: "Edit my Blog"});
   } catch (err) {
     res.status(400).json(err);
   }
