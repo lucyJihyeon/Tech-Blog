@@ -2,17 +2,23 @@
   <div class="container-db">
     <div class="post">Explore Tech Blog</div>
     <div class="list-group">
-      {{#each blogposts as |blog|}}
-        <button
-          class="detail-blog blog-title"
-          data-index="{{blog.id}}"
-        >{{blog.title}}
-          <div>posted by
-            {{blog.user.name}}
-            on
-            {{format_date blog.date_created}}</div>
-        </button>
-      {{/each}}
+      {{#if blogposts }}
+        {{#each blogposts as |blog|}}
+          <button
+            class="detail-blog blog-title"
+            data-index="{{blog.id}}"
+          >{{blog.title}}
+            <div>posted by
+              {{blog.user.name}}
+              on
+              {{format_date blog.date_created}}</div>
+          </button>
+        {{/each}}
+        {{else}}
+        <p class="no-post">Join the Tech Conversation
+          <a href="/api/blog">&nbsp; -Post Now</a>
+        </p>
+      {{/if}}
     </div>
   </div>
 </div>

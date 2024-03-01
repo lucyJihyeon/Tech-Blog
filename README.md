@@ -68,7 +68,7 @@ This is the preview of the application
 ## Link
 
 This is the link to the application
-[alt preview]()
+[tech-blog](https://tech-blog-lucy-d3e6ca812dab.herokuapp.com/)
 
 ## Contact
 
