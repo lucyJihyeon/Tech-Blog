@@ -649,6 +649,25 @@ textarea {
   height: 50%; 
 }
 
-:placeholder-shown {
+/* container to hold api/dashboard anchor */
+.no-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
   color: var(--background-color);
+}
+
+.no-post a {
+  text-decoration: none;
+}
+/* change the style when the anchor tag is hovered */
+.no-post a:hover {
+  color: white;
+  background: linear-gradient(to right, #FFFFFF, var(--point-color), #FFFFFF);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+  text-align: left;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
