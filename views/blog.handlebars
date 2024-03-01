@@ -29,7 +29,7 @@
 
 {{else}}
 
-<form id="create-form">
+{{!-- <form id="create-form">
     <div class="mb-3">
   <label for="blog-title" class="form-label" >Title</label>
   <input type="input" class="form-control" id="blog-title" placeholder="enter the title here!">
@@ -39,7 +39,32 @@
   <textarea class="form-control" id="description" rows="3"></textarea>
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+</form> --}}
+
+
+<div class="container-db">
+  <div class="post">Creating a post</div>
+    <div class="container-content">
+      <form id="create-form">
+        <div class="input-container">
+          <div class="entry-area">
+            <input type="text" id="blog-title" class="input" placeholder="enter the title here!" required>
+            <div class="labelline">Title</div>
+          </div>
+        </div>
+        <div class="input-container">
+          <div class="entry-area">
+            <textarea type="text" id="description" class="input" required></textarea>
+            <div class="labelline">Description</div>
+          </div>
+        </div>
+        <div class="update-container">
+          <button type="submit" class="blog-title">Create</button>
+        </div>
+      </form>
+    </div>
 </form>
+
 
 <script src="/js/blog.js"></script>
 
