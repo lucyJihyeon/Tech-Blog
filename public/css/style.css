@@ -648,3 +648,7 @@ textarea {
   justify-content: space-between; 
   height: 50%; 
 }
+
+:placeholder-shown {
+  color: var(--background-color);
+}

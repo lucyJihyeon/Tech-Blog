@@ -8,9 +8,7 @@
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies-Used](#technologies-used)
-- [License](#license)
 - [Contribution](#contribution)
-- [Tests](#tests)
 - [Preview](#preview)
 - [Link](#link)
 - [Contact](#contact)
@@ -24,14 +22,18 @@ npm i
 
 ## Usage
 1. Open the application in a web browser 
-2. if running this application using 
+2. If running this application locally, please run:
 ``` 
 node server.js
 ```
-go to (http://localhost:3001)
-3. Click the Get Started button to navigate to the '/notes' path.
-4. Use the form to create and save notes
-5. Delete notes by clicking the trash icon next to each note in the left section.
+3. If wanting to apply seed data first, please run:
+```
+node ./seeds/seed.js
+```
+4. Go to (http://localhost:3001)
+5. To explore the full features of the web application, log in first.
+6. Click "Home" in the nav bar to view all the blog posts
+7. Click "Dashboard" to view the blog post that you created.
 
 
 
